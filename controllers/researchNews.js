@@ -1,4 +1,4 @@
-const ResearchNews = require("./../models/Researchnews.model");
+const ResearchNews = require("../models/Researchnews");
 const uuid = require("uuid").v4();
 //----------------------------------->
 

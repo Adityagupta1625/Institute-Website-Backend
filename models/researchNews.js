@@ -1,39 +1,21 @@
-const mongoose = require('mongoose');
-//----------------------------------->
+const mongoose = require("mongoose");
 
-//Schema---------------------------->
-const Schema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const ResearchSchema = new Schema(
+  {
+    id:{type:String,required:true},
     researchTitle: { type: String, required: true },
-    researchText: { type: String, required: true },
-    date: { type: Date, required: true },
-    uploadDate: {
-        type: Date,
-        default: Date.now()
-    },
-    updateDate: {
-        type: Date,
-        default: Date.now()
-    },
-    SourceOfInfo: {
-        type: Object,
-        default: {
-            name: null,
-            email: null,
-            designation: null,
-            department: null
-        }
-    }
-}, {
+    researchDesc: { type: String, required: true },
+    image: { type: String },
+    sourceofinformation: { type: Object, default: {} },
+    type: { type: String },
+  },
+  {
     timestamps: true,
-});
+  }
+);
 
-//Model---------------------------->
-const Model = mongoose.model('ResearchNews', Schema);
+const Research = mongoose.model("Research", ResearchSchema);
 
-
-//Export----------------------------->
-module.exports = Model;
-
-
-
-
+module.exports = Research;

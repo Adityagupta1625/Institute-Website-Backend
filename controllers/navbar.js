@@ -1,4 +1,4 @@
-const Navbar = require("./../models/navbar");
+const Navbar = require("../models/navbar");
 const uuid = require("uuid");
 //----------------------------------->
 
