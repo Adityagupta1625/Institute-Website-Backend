@@ -13,5 +13,7 @@ Router.route('/showbyid').post(researchNewsController.showResearchNewsbyId);
 
 Router.route('/update').post(researchNewsController.updateResearchNews);
 
+Router.route('/delete').post(researchNewsController.deleteResearchNews);
+
 //Export----------------------------->
 module.exports = Router;

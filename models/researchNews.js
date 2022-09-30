@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 
 const ResearchSchema = new Schema(
   {
-    id:{type:String,required:true},
     researchTitle: { type: String, required: true },
     researchDesc: { type: String, required: true },
     image: { type: String },
     sourceofinformation: { type: Object, default: {} },
     type: { type: String },
+    show: { type: Boolean, default: true },
   },
   {
     timestamps: true,
